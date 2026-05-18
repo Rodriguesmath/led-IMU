@@ -2,7 +2,7 @@
 
 [![ESP-IDF](https://img.shields.io/badge/ESP--IDF-compatible-blue)](https://docs.espressif.com/projects/esp-idf/)
 [![Linguagem](https://img.shields.io/badge/C-embedded-lightgrey)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![Documentação](https://img.shields.io/badge/docs-Doxygen-2b7a78)](docs/index.html)
+[![Documentação](https://img.shields.io/badge/docs-Doxygen-2b7a78)](https://rodriguesmath.github.io/led-IMU/html/index.html)
 
 Projeto embarcado em ESP-IDF para um sistema RTOS com leitura de potenciômetro, controle de LED por PWM, captura de dados de IMU e saída periódica no console serial.
 

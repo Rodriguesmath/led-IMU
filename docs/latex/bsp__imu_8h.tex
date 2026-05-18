@@ -1,0 +1,140 @@
+\doxysection{Referência do Arquivo main/inc/bsp\+\_\+imu.h}
+\hypertarget{bsp__imu_8h}{}\label{bsp__imu_8h}\index{main/inc/bsp\_imu.h@{main/inc/bsp\_imu.h}}
+
+
+Board Support Package para comunicação I2C e conversão de dados do sensor inercial MPU6050.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}esp\+\_\+err.\+h"{}}\newline
+Gráfico de dependência de inclusões para bsp\+\_\+imu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{bsp__imu_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{bsp__imu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structimu__data__t}{imu\+\_\+data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Estrutura que armazena as acelerações convertidas em g para os três eixos espaciais. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bsp__imu_8h_af47631d568bba17edf9d1ea042602bb6}{I2\+C\+\_\+\+MASTER\+\_\+\+SDA\+\_\+\+IO}}~21
+\item 
+\#define \mbox{\hyperlink{bsp__imu_8h_a033b5e8a30541fe4ff939a62fdb7a43d}{I2\+C\+\_\+\+MASTER\+\_\+\+SCL\+\_\+\+IO}}~22
+\item 
+\#define \mbox{\hyperlink{bsp__imu_8h_ad4d6255d8f7e5dc770e773b787977508}{MPU6050\+\_\+\+ADDR}}~0x68
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{bsp__imu_8h_a08a6e2fc2f825004443ba357cd2fadf4}{bsp\+\_\+imu\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa o barramento I2C em modo mestre e acorda o chip MPU6050. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{bsp__imu_8h_a557fc8c4b03b1f191c01184914bcc610}{bsp\+\_\+imu\+\_\+read\+\_\+accel}} (\mbox{\hyperlink{structimu__data__t}{imu\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Lê os registradores de aceleração da IMU e converte os valores brutos para g. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Board Support Package para comunicação I2C e conversão de dados do sensor inercial MPU6050. 
+
+\begin{DoxyAuthor}{Autor}
+Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2026 
+\end{DoxyDate}
+
+
+\label{doc-define-members}
+\Hypertarget{bsp__imu_8h_doc-define-members}
+\doxysubsection{Definições e macros}
+\Hypertarget{bsp__imu_8h_a033b5e8a30541fe4ff939a62fdb7a43d}\index{bsp\_imu.h@{bsp\_imu.h}!I2C\_MASTER\_SCL\_IO@{I2C\_MASTER\_SCL\_IO}}
+\index{I2C\_MASTER\_SCL\_IO@{I2C\_MASTER\_SCL\_IO}!bsp\_imu.h@{bsp\_imu.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_MASTER\_SCL\_IO}{I2C\_MASTER\_SCL\_IO}}
+{\footnotesize\ttfamily \label{bsp__imu_8h_a033b5e8a30541fe4ff939a62fdb7a43d} 
+\#define I2\+C\+\_\+\+MASTER\+\_\+\+SCL\+\_\+\+IO~22}
+
+Pino SCL físico do barramento I2C \Hypertarget{bsp__imu_8h_af47631d568bba17edf9d1ea042602bb6}\index{bsp\_imu.h@{bsp\_imu.h}!I2C\_MASTER\_SDA\_IO@{I2C\_MASTER\_SDA\_IO}}
+\index{I2C\_MASTER\_SDA\_IO@{I2C\_MASTER\_SDA\_IO}!bsp\_imu.h@{bsp\_imu.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_MASTER\_SDA\_IO}{I2C\_MASTER\_SDA\_IO}}
+{\footnotesize\ttfamily \label{bsp__imu_8h_af47631d568bba17edf9d1ea042602bb6} 
+\#define I2\+C\+\_\+\+MASTER\+\_\+\+SDA\+\_\+\+IO~21}
+
+Pino SDA físico do barramento I2C \Hypertarget{bsp__imu_8h_ad4d6255d8f7e5dc770e773b787977508}\index{bsp\_imu.h@{bsp\_imu.h}!MPU6050\_ADDR@{MPU6050\_ADDR}}
+\index{MPU6050\_ADDR@{MPU6050\_ADDR}!bsp\_imu.h@{bsp\_imu.h}}
+\doxysubsubsection{\texorpdfstring{MPU6050\_ADDR}{MPU6050\_ADDR}}
+{\footnotesize\ttfamily \label{bsp__imu_8h_ad4d6255d8f7e5dc770e773b787977508} 
+\#define MPU6050\+\_\+\+ADDR~0x68}
+
+Endereço I2C do MPU6050 
+
+\label{doc-func-members}
+\Hypertarget{bsp__imu_8h_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{bsp__imu_8h_a08a6e2fc2f825004443ba357cd2fadf4}\index{bsp\_imu.h@{bsp\_imu.h}!bsp\_imu\_init@{bsp\_imu\_init}}
+\index{bsp\_imu\_init@{bsp\_imu\_init}!bsp\_imu.h@{bsp\_imu.h}}
+\doxysubsubsection{\texorpdfstring{bsp\_imu\_init()}{bsp\_imu\_init()}}
+{\footnotesize\ttfamily \label{bsp__imu_8h_a08a6e2fc2f825004443ba357cd2fadf4} 
+esp\+\_\+err\+\_\+t bsp\+\_\+imu\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o barramento I2C em modo mestre e acorda o chip MPU6050. 
+
+
+\begin{DoxyItemize}
+\item Define a frequência para 100k\+Hz (Standard Mode), tira o sensor do modo sleep e parametriza a escala do acelerômetro em ±2g.
+\item \begin{DoxyReturn}{Retorna}
+esp\+\_\+err\+\_\+t Retorna ESP\+\_\+\+OK em caso de sucesso na inicialização ou códigos de falha do I2C. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__imu_8h_a08a6e2fc2f825004443ba357cd2fadf4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__imu_8h_a557fc8c4b03b1f191c01184914bcc610}\index{bsp\_imu.h@{bsp\_imu.h}!bsp\_imu\_read\_accel@{bsp\_imu\_read\_accel}}
+\index{bsp\_imu\_read\_accel@{bsp\_imu\_read\_accel}!bsp\_imu.h@{bsp\_imu.h}}
+\doxysubsubsection{\texorpdfstring{bsp\_imu\_read\_accel()}{bsp\_imu\_read\_accel()}}
+{\footnotesize\ttfamily \label{bsp__imu_8h_a557fc8c4b03b1f191c01184914bcc610} 
+esp\+\_\+err\+\_\+t bsp\+\_\+imu\+\_\+read\+\_\+accel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimu__data__t}{imu\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Lê os registradores de aceleração da IMU e converte os valores brutos para g. 
+
+
+\begin{DoxyItemize}
+\item Realiza uma transação única de escrita/leitura via I2C coletando os 6 bytes sequenciais de dados.
+\item 
+\begin{DoxyParams}[1]{Parâmetros}
+\mbox{\texttt{out}}  & {\em data} & Ponteiro para a estrutura onde os dados convertidos serão salvos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK em caso de sucesso na leitura do barramento. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{bsp__imu_8h_a557fc8c4b03b1f191c01184914bcc610_icgraph}
+\end{center}
+\end{figure}

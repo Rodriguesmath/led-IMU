@@ -1,0 +1,7 @@
+<map id="bsp_led_init" name="bsp_led_init">
+<area shape="rect" id="Node000001" title="Inicializa o periférico LEDC (PWM) para o controle do LED." alt="" coords="341,5,431,32"/>
+<area shape="rect" id="Node000002" href="$hal__system_8c.html#a861a576709580c24860cc0e0fccf6685" title="Inicializa todo o ecossistema de hardware do dispositivo." alt="" coords="181,5,293,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="325,21,293,21,293,16,325,16"/>
+<area shape="rect" id="Node000003" href="$system__tasks_8c.html#a30cd49b8883076704708be05a1213c46" title="Inicializa os recursos do RTOS e cria as tarefas do sistema." alt="" coords="5,5,133,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
+</map>

@@ -1,0 +1,29 @@
+\doxysection{bsp\+\_\+imu.\+h}
+\hypertarget{bsp__imu_8h_source}{}\label{bsp__imu_8h_source}\index{main/inc/bsp\_imu.h@{main/inc/bsp\_imu.h}}
+\mbox{\hyperlink{bsp__imu_8h}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ BSP\_IMU\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ BSP\_IMU\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}esp\_err.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_SDA\_IO\ \ \ \ \ \ \ \ \ \ \ 21\ \ \ \ \ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_SCL\_IO\ \ \ \ \ \ \ \ \ \ \ 22\ \ \ \ \ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ MPU6050\_ADDR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x68\ \ \ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structimu__data__t_afa2c17e76da81d63f578dc3b003f4cff}{x}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structimu__data__t_a5a379f78276e3fbccc246d6c2d9046b0}{y}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structimu__data__t_a8ba2b90ff110db3f86f0922bdc8cfb50}{z}};\ }
+\DoxyCodeLine{00026\ \}\ \mbox{\hyperlink{structimu__data__t}{imu\_data\_t}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ esp\_err\_t\ \mbox{\hyperlink{bsp__imu_8h_a08a6e2fc2f825004443ba357cd2fadf4}{bsp\_imu\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ esp\_err\_t\ \mbox{\hyperlink{bsp__imu_8h_a557fc8c4b03b1f191c01184914bcc610}{bsp\_imu\_read\_accel}}(\mbox{\hyperlink{structimu__data__t}{imu\_data\_t}}\ *data);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ BSP\_IMU\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

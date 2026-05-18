@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto RTOS - Atividade 09: Referência do Arquivo main/src/hal_system.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto RTOS - Atividade 09<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('hal__system_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência do Arquivo hal_system.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementação dos serviços de abstração e conversão de dados de hardware.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="hal__system_8h_source.html">hal_system.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bsp__led_8h_source.html">bsp_led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bsp__button_8h_source.html">bsp_button.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bsp__potentiometer_8h_source.html">bsp_potentiometer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bsp__imu_8h_source.html">bsp_imu.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para hal_system.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="hal__system_8c__incl.png" border="0" usemap="#amain_2src_2hal__system_8c" loading="lazy" alt=""/></div>
+<map name="amain_2src_2hal__system_8c" id="amain_2src_2hal__system_8c">
+<area shape="rect" title="Implementação dos serviços de abstração e conversão de dados de hardware." alt="" coords="234,5,388,32"/>
+<area shape="rect" href="hal__system_8h.html" title="Camada de Abstração de Hardware (HAL) para o sistema multitarefa." alt="" coords="376,80,475,107"/>
+<area shape="poly" title=" " alt="" coords="332,30,394,69,391,74,330,35"/>
+<area shape="rect" href="bsp__led_8h.html" title="Board Support Package para controle do LED utilizando o periférico LEDC (PWM)." alt="" coords="168,80,246,107"/>
+<area shape="poly" title=" " alt="" coords="294,35,239,73,236,69,291,30"/>
+<area shape="rect" href="bsp__button_8h.html" title="Board Support Package para gerenciamento de botões com tratamento de interrupção e debounce." alt="" coords="499,80,595,107"/>
+<area shape="poly" title=" " alt="" coords="353,30,492,72,490,78,351,35"/>
+<area shape="rect" href="bsp__potentiometer_8h.html" title="Board Support Package para leitura analógica de potenciômetro via driver ADC Oneshot." alt="" coords="5,80,145,107"/>
+<area shape="poly" title=" " alt="" coords="271,35,132,78,130,72,269,30"/>
+<area shape="rect" href="bsp__imu_8h.html" title="Board Support Package para comunicação I2C e conversão de dados do sensor inercial MPU6050." alt="" coords="270,80,352,107"/>
+<area shape="poly" title=" " alt="" coords="314,33,314,64,308,64,308,33"/>
+<area shape="rect" title=" " alt="" coords="187,155,251,181"/>
+<area shape="poly" title=" " alt="" coords="391,110,266,153,264,148,389,105"/>
+<area shape="rect" title=" " alt="" coords="387,155,462,181"/>
+<area shape="poly" title=" " alt="" coords="428,107,428,139,422,139,423,107"/>
+<area shape="rect" title=" " alt="" coords="280,155,355,181"/>
+<area shape="poly" title=" " alt="" coords="408,109,351,148,348,143,405,105"/>
+<area shape="poly" title=" " alt="" coords="212,107,217,139,212,140,206,108"/>
+<area shape="rect" title=" " alt="" coords="633,155,776,181"/>
+<area shape="poly" title=" " alt="" coords="576,105,664,145,662,150,573,110"/>
+<area shape="rect" title=" " alt="" coords="485,155,609,181"/>
+<area shape="poly" title=" " alt="" coords="550,107,550,139,544,139,544,107"/>
+<area shape="poly" title=" " alt="" coords="101,105,181,145,179,150,99,110"/>
+<area shape="poly" title=" " alt="" coords="297,109,248,147,245,143,293,105"/>
+<area shape="poly" title=" " alt="" coords="315,107,318,139,312,139,310,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a861a576709580c24860cc0e0fccf6685" id="r_a861a576709580c24860cc0e0fccf6685"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a861a576709580c24860cc0e0fccf6685">hal_system_init</a> (void *sys_semaphore)</td></tr>
+<tr class="memdesc:a861a576709580c24860cc0e0fccf6685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa todo o ecossistema de hardware do dispositivo.  <br /></td></tr>
+<tr class="memitem:aa0d01b0e8253639a6cec704ae7ad839c" id="r_aa0d01b0e8253639a6cec704ae7ad839c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0d01b0e8253639a6cec704ae7ad839c">hal_led_set_percent</a> (uint32_t percentage)</td></tr>
+<tr class="memdesc:aa0d01b0e8253639a6cec704ae7ad839c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a intensidade luminosa do LED de status.  <br /></td></tr>
+<tr class="memitem:af619c344743baba796c310424844f55c" id="r_af619c344743baba796c310424844f55c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af619c344743baba796c310424844f55c">hal_potentiometer_get_data</a> (uint32_t *raw_value, uint32_t *voltage_mv)</td></tr>
+<tr class="memdesc:af619c344743baba796c310424844f55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê o valor atual do potenciômetro de forma estruturada.  <br /></td></tr>
+<tr class="memitem:a3dc9c297c9f70d3f274e02e838f875bf" id="r_a3dc9c297c9f70d3f274e02e838f875bf"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dc9c297c9f70d3f274e02e838f875bf">hal_imu_get_accel</a> (<a class="el" href="structhal__imu__data__t.html">hal_imu_data_t</a> *imu_data)</td></tr>
+<tr class="memdesc:a3dc9c297c9f70d3f274e02e838f875bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coleta as acelerações convertidas do sensor inercial.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Implementação dos serviços de abstração e conversão de dados de hardware. </p>
+<dl class="section author"><dt>Autor</dt><dd>Rodrigues </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>2026 </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Funções</h2>
+<a id="a3dc9c297c9f70d3f274e02e838f875bf" name="a3dc9c297c9f70d3f274e02e838f875bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc9c297c9f70d3f274e02e838f875bf">&#9670;&#160;</a></span>hal_imu_get_accel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t hal_imu_get_accel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structhal__imu__data__t.html">hal_imu_data_t</a> *</td>          <td class="paramname"><span class="paramname"><em>imu_data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coleta as acelerações convertidas do sensor inercial. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">imu_data</td><td>Ponteiro para a estrutura onde serão salvos os eixos X, Y e Z. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>esp_err_t ESP_OK em caso de sucesso na transação de leitura. </dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="hal__system_8c_a3dc9c297c9f70d3f274e02e838f875bf_cgraph.png" border="0" usemap="#ahal__system_8c_a3dc9c297c9f70d3f274e02e838f875bf_cgraph" loading="lazy" alt=""/></div>
+<map name="ahal__system_8c_a3dc9c297c9f70d3f274e02e838f875bf_cgraph" id="ahal__system_8c_a3dc9c297c9f70d3f274e02e838f875bf_cgraph">
+<area shape="rect" title="Coleta as acelerações convertidas do sensor inercial." alt="" coords="5,5,135,32"/>
+<area shape="rect" href="bsp__imu_8c.html#a557fc8c4b03b1f191c01184914bcc610" title="Lê os registradores de aceleração da IMU e converte os valores brutos para g." alt="" coords="183,5,323,32"/>
+<area shape="poly" title=" " alt="" coords="135,16,167,16,167,21,135,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa0d01b0e8253639a6cec704ae7ad839c" name="aa0d01b0e8253639a6cec704ae7ad839c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d01b0e8253639a6cec704ae7ad839c">&#9670;&#160;</a></span>hal_led_set_percent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hal_led_set_percent </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>percentage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a intensidade luminosa do LED de status. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percentage</td><td>Valor em porcentagem (0 a 100%) desejado para o brilho. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="hal__system_8c_aa0d01b0e8253639a6cec704ae7ad839c_cgraph.png" border="0" usemap="#ahal__system_8c_aa0d01b0e8253639a6cec704ae7ad839c_cgraph" loading="lazy" alt=""/></div>
+<map name="ahal__system_8c_aa0d01b0e8253639a6cec704ae7ad839c_cgraph" id="ahal__system_8c_aa0d01b0e8253639a6cec704ae7ad839c_cgraph">
+<area shape="rect" title="Define a intensidade luminosa do LED de status." alt="" coords="5,5,143,32"/>
+<area shape="rect" href="bsp__led_8c.html#a7fd21502d132a6be67897022baa562ce" title="Atualiza a intensidade do brilho do LED (Duty Cycle)." alt="" coords="191,5,349,32"/>
+<area shape="poly" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af619c344743baba796c310424844f55c" name="af619c344743baba796c310424844f55c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af619c344743baba796c310424844f55c">&#9670;&#160;</a></span>hal_potentiometer_get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hal_potentiometer_get_data </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>raw_value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>voltage_mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê o valor atual do potenciômetro de forma estruturada. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">raw_value</td><td>Ponteiro para salvar o valor bruto do ADC (0-4095). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">voltage_mv</td><td>Ponteiro para salvar a tensão convertida em milivolts. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="hal__system_8c_af619c344743baba796c310424844f55c_cgraph.png" border="0" usemap="#ahal__system_8c_af619c344743baba796c310424844f55c_cgraph" loading="lazy" alt=""/></div>
+<map name="ahal__system_8c_af619c344743baba796c310424844f55c_cgraph" id="ahal__system_8c_af619c344743baba796c310424844f55c_cgraph">
+<area shape="rect" title="Lê o valor atual do potenciômetro de forma estruturada." alt="" coords="5,31,187,57"/>
+<area shape="rect" href="bsp__potentiometer_8c.html#ae661a47a4212cd3505932899cb1a4cd6" title="Realiza a leitura e converte o valor medido em milivolts." alt="" coords="235,5,420,32"/>
+<area shape="poly" title=" " alt="" coords="187,31,219,28,219,33,187,37"/>
+<area shape="rect" href="bsp__potentiometer_8c.html#a065f4fcbdfee9f5409818bfd5c15d61a" title="Realiza a leitura do valor bruto do conversor ADC." alt="" coords="468,31,656,57"/>
+<area shape="poly" title=" " alt="" coords="187,41,452,41,452,47,187,47"/>
+<area shape="poly" title=" " alt="" coords="421,26,453,30,452,35,420,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a861a576709580c24860cc0e0fccf6685" name="a861a576709580c24860cc0e0fccf6685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a861a576709580c24860cc0e0fccf6685">&#9670;&#160;</a></span>hal_system_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t hal_system_init </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>sys_semaphore</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa todo o ecossistema de hardware do dispositivo. </p>
+<ul>
+<li>Abstrai a inicialização sequencial de todos os periféricos (LED, Botão, Potenciômetro e IMU). <dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sys_semaphore</td><td>Semáforo binário do RTOS para repassar ao driver do botão. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>esp_err_t Retorna ESP_OK se todos os periféricos vitais subirem com sucesso. </dd></dl>
+</li>
+</ul>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="hal__system_8c_a861a576709580c24860cc0e0fccf6685_cgraph.png" border="0" usemap="#ahal__system_8c_a861a576709580c24860cc0e0fccf6685_cgraph" loading="lazy" alt=""/></div>
+<map name="ahal__system_8c_a861a576709580c24860cc0e0fccf6685_cgraph" id="ahal__system_8c_a861a576709580c24860cc0e0fccf6685_cgraph">
+<area shape="rect" title="Inicializa todo o ecossistema de hardware do dispositivo." alt="" coords="5,81,118,108"/>
+<area shape="rect" href="bsp__button_8c.html#a5b1e076b329048176e48cf8e6d7caac2" title="Inicializa o botão de entrada com interrupções ativas e associa o semáforo do sistema." alt="" coords="187,5,296,32"/>
+<area shape="poly" title=" " alt="" coords="87,78,165,42,181,35,183,40,167,46,90,83"/>
+<area shape="rect" href="bsp__imu_8c.html#a08a6e2fc2f825004443ba357cd2fadf4" title="Inicializa o barramento I2C em modo mestre e acorda o chip MPU6050." alt="" coords="195,56,289,83"/>
+<area shape="poly" title=" " alt="" coords="118,84,179,75,180,81,118,89"/>
+<area shape="rect" href="bsp__led_8c.html#a1bc420f505e4381c122b5e9f62a4e8d1" title="Inicializa o periférico LEDC (PWM) para o controle do LED." alt="" coords="197,107,287,133"/>
+<area shape="poly" title=" " alt="" coords="118,100,182,109,181,114,118,105"/>
+<area shape="rect" href="bsp__potentiometer_8c.html#afcab87f9b60ee51c1e201ab0bf0873b3" title="Inicializa o conversor analógico&#45;digital (ADC) no modo Oneshot." alt="" coords="166,157,318,184"/>
+<area shape="poly" title=" " alt="" coords="90,106,167,143,183,149,181,154,165,148,87,111"/>
+</map>
+</div>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="hal__system_8c_a861a576709580c24860cc0e0fccf6685_icgraph.png" border="0" usemap="#ahal__system_8c_a861a576709580c24860cc0e0fccf6685_icgraph" loading="lazy" alt=""/></div>
+<map name="ahal__system_8c_a861a576709580c24860cc0e0fccf6685_icgraph" id="ahal__system_8c_a861a576709580c24860cc0e0fccf6685_icgraph">
+<area shape="rect" title="Inicializa todo o ecossistema de hardware do dispositivo." alt="" coords="181,5,293,32"/>
+<area shape="rect" href="system__tasks_8c.html#a30cd49b8883076704708be05a1213c46" title="Inicializa os recursos do RTOS e cria as tarefas do sistema." alt="" coords="5,5,133,32"/>
+<area shape="poly" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a href="dir_2101cd0b22112584ff59816a4bc911f7.html">src</a></li><li class="navelem"><a href="hal__system_8c.html">hal_system.c</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

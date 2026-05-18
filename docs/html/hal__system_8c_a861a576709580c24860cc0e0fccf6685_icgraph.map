@@ -1,0 +1,5 @@
+<map id="hal_system_init" name="hal_system_init">
+<area shape="rect" id="Node000001" title="Inicializa todo o ecossistema de hardware do dispositivo." alt="" coords="181,5,293,32"/>
+<area shape="rect" id="Node000002" href="$system__tasks_8c.html#a30cd49b8883076704708be05a1213c46" title="Inicializa os recursos do RTOS e cria as tarefas do sistema." alt="" coords="5,5,133,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
+</map>

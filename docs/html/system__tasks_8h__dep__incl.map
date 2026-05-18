@@ -1,0 +1,7 @@
+<map id="main/inc/system_tasks.h" name="main/inc/system_tasks.h">
+<area shape="rect" id="Node000001" title="Gerenciador de Tarefas (Engine) do Sistema Operacional." alt="" coords="62,5,229,32"/>
+<area shape="rect" id="Node000002" href="$main_8c.html" title="Ponto de entrada do firmware de arquitetura ultra&#45;mínima." alt="" coords="5,80,120,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,45,78,82,75,78,118,40"/>
+<area shape="rect" id="Node000003" href="$system__tasks_8c.html" title="Implementação e gerenciamento das rotinas internas das Tarefas do RTOS." alt="" coords="144,80,312,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,40,215,78,212,82,169,45"/>
+</map>

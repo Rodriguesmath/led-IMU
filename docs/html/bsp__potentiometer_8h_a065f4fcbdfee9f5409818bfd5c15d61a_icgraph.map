@@ -1,0 +1,8 @@
+<map id="bsp_potentiometer_read_raw" name="bsp_potentiometer_read_raw">
+<area shape="rect" id="Node000001" title="Realiza a leitura do valor bruto do conversor ADC." alt="" coords="468,31,656,57"/>
+<area shape="rect" id="Node000002" href="$bsp__potentiometer_8c.html#ae661a47a4212cd3505932899cb1a4cd6" title="Realiza a leitura e converte o valor medido em milivolts." alt="" coords="235,5,420,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,35,420,31,421,26,453,30"/>
+<area shape="rect" id="Node000003" href="$hal__system_8c.html#af619c344743baba796c310424844f55c" title="Lê o valor atual do potenciômetro de forma estruturada." alt="" coords="5,31,187,57"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="452,47,187,47,187,41,452,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="220,33,187,37,187,31,219,28"/>
+</map>

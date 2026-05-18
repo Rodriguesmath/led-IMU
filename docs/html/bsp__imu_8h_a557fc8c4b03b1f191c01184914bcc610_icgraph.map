@@ -1,0 +1,5 @@
+<map id="bsp_imu_read_accel" name="bsp_imu_read_accel">
+<area shape="rect" id="Node000001" title="Lê os registradores de aceleração da IMU e converte os valores brutos para g." alt="" coords="183,5,323,32"/>
+<area shape="rect" id="Node000002" href="$hal__system_8c.html#a3dc9c297c9f70d3f274e02e838f875bf" title="Coleta as acelerações convertidas do sensor inercial." alt="" coords="5,5,135,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,21,135,21,135,16,167,16"/>
+</map>

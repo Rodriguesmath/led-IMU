@@ -1,0 +1,172 @@
+\doxysection{Referência do Arquivo main/inc/hal\+\_\+system.h}
+\hypertarget{hal__system_8h}{}\label{hal__system_8h}\index{main/inc/hal\_system.h@{main/inc/hal\_system.h}}
+
+
+Camada de Abstração de Hardware (HAL) para o sistema multitarefa.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}esp\+\_\+err.\+h"{}}\newline
+Gráfico de dependência de inclusões para hal\+\_\+system.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{hal__system_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{hal__system_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhal__imu__data__t}{hal\+\_\+imu\+\_\+data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Estrutura unificada na HAL para dados do acelerômetro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{hal__system_8h_a861a576709580c24860cc0e0fccf6685}{hal\+\_\+system\+\_\+init}} (void \texorpdfstring{$\ast$}{*}sys\+\_\+semaphore)
+\begin{DoxyCompactList}\small\item\em Inicializa todo o ecossistema de hardware do dispositivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hal__system_8h_aa0d01b0e8253639a6cec704ae7ad839c}{hal\+\_\+led\+\_\+set\+\_\+percent}} (uint32\+\_\+t percentage)
+\begin{DoxyCompactList}\small\item\em Define a intensidade luminosa do LED de status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hal__system_8h_af619c344743baba796c310424844f55c}{hal\+\_\+potentiometer\+\_\+get\+\_\+data}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}raw\+\_\+value, uint32\+\_\+t \texorpdfstring{$\ast$}{*}voltage\+\_\+mv)
+\begin{DoxyCompactList}\small\item\em Lê o valor atual do potenciômetro de forma estruturada. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{hal__system_8h_a3dc9c297c9f70d3f274e02e838f875bf}{hal\+\_\+imu\+\_\+get\+\_\+accel}} (\mbox{\hyperlink{structhal__imu__data__t}{hal\+\_\+imu\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}imu\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Coleta as acelerações convertidas do sensor inercial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Camada de Abstração de Hardware (HAL) para o sistema multitarefa. 
+
+\begin{DoxyAuthor}{Autor}
+Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2026
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*} Esta camada abstrai as chamadas diretas da BSP, unificando a inicialização do hardware e fornecendo funções limpas de leitura e escrita para a \doxylink{main_8c}{main.\+c}. 
+\end{DoxyItemize}
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{hal__system_8h_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{hal__system_8h_a3dc9c297c9f70d3f274e02e838f875bf}\index{hal\_system.h@{hal\_system.h}!hal\_imu\_get\_accel@{hal\_imu\_get\_accel}}
+\index{hal\_imu\_get\_accel@{hal\_imu\_get\_accel}!hal\_system.h@{hal\_system.h}}
+\doxysubsubsection{\texorpdfstring{hal\_imu\_get\_accel()}{hal\_imu\_get\_accel()}}
+{\footnotesize\ttfamily \label{hal__system_8h_a3dc9c297c9f70d3f274e02e838f875bf} 
+esp\+\_\+err\+\_\+t hal\+\_\+imu\+\_\+get\+\_\+accel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhal__imu__data__t}{hal\+\_\+imu\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{imu\+\_\+data}{}\end{DoxyParamCaption})}
+
+
+
+Coleta as acelerações convertidas do sensor inercial. 
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+\mbox{\texttt{out}}  & {\em imu\+\_\+data} & Ponteiro para a estrutura onde serão salvos os eixos X, Y e Z. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK em caso de sucesso na transação de leitura. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{hal__system_8h_a3dc9c297c9f70d3f274e02e838f875bf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hal__system_8h_aa0d01b0e8253639a6cec704ae7ad839c}\index{hal\_system.h@{hal\_system.h}!hal\_led\_set\_percent@{hal\_led\_set\_percent}}
+\index{hal\_led\_set\_percent@{hal\_led\_set\_percent}!hal\_system.h@{hal\_system.h}}
+\doxysubsubsection{\texorpdfstring{hal\_led\_set\_percent()}{hal\_led\_set\_percent()}}
+{\footnotesize\ttfamily \label{hal__system_8h_aa0d01b0e8253639a6cec704ae7ad839c} 
+void hal\+\_\+led\+\_\+set\+\_\+percent (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{percentage}{}\end{DoxyParamCaption})}
+
+
+
+Define a intensidade luminosa do LED de status. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em percentage} & Valor em porcentagem (0 a 100\%) desejado para o brilho. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{hal__system_8h_aa0d01b0e8253639a6cec704ae7ad839c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hal__system_8h_af619c344743baba796c310424844f55c}\index{hal\_system.h@{hal\_system.h}!hal\_potentiometer\_get\_data@{hal\_potentiometer\_get\_data}}
+\index{hal\_potentiometer\_get\_data@{hal\_potentiometer\_get\_data}!hal\_system.h@{hal\_system.h}}
+\doxysubsubsection{\texorpdfstring{hal\_potentiometer\_get\_data()}{hal\_potentiometer\_get\_data()}}
+{\footnotesize\ttfamily \label{hal__system_8h_af619c344743baba796c310424844f55c} 
+void hal\+\_\+potentiometer\+\_\+get\+\_\+data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{raw\+\_\+value}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{voltage\+\_\+mv}{}\end{DoxyParamCaption})}
+
+
+
+Lê o valor atual do potenciômetro de forma estruturada. 
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+\mbox{\texttt{out}}  & {\em raw\+\_\+value} & Ponteiro para salvar o valor bruto do ADC (0-\/4095). \\
+\hline
+\mbox{\texttt{out}}  & {\em voltage\+\_\+mv} & Ponteiro para salvar a tensão convertida em milivolts. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hal__system_8h_af619c344743baba796c310424844f55c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hal__system_8h_a861a576709580c24860cc0e0fccf6685}\index{hal\_system.h@{hal\_system.h}!hal\_system\_init@{hal\_system\_init}}
+\index{hal\_system\_init@{hal\_system\_init}!hal\_system.h@{hal\_system.h}}
+\doxysubsubsection{\texorpdfstring{hal\_system\_init()}{hal\_system\_init()}}
+{\footnotesize\ttfamily \label{hal__system_8h_a861a576709580c24860cc0e0fccf6685} 
+esp\+\_\+err\+\_\+t hal\+\_\+system\+\_\+init (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{sys\+\_\+semaphore}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa todo o ecossistema de hardware do dispositivo. 
+
+
+\begin{DoxyItemize}
+\item Abstrai a inicialização sequencial de todos os periféricos (LED, Botão, Potenciômetro e IMU). 
+\begin{DoxyParams}{Parâmetros}
+{\em sys\+\_\+semaphore} & Semáforo binário do RTOS para repassar ao driver do botão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+esp\+\_\+err\+\_\+t Retorna ESP\+\_\+\+OK se todos os periféricos vitais subirem com sucesso. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{hal__system_8h_a861a576709580c24860cc0e0fccf6685_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{hal__system_8h_a861a576709580c24860cc0e0fccf6685_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,37 @@
+\doxysection{Referência do Arquivo main/src/main.c}
+\hypertarget{main_8c}{}\label{main_8c}\index{main/src/main.c@{main/src/main.c}}
+
+
+Ponto de entrada do firmware de arquitetura ultra-\/mínima.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}system\+\_\+tasks.\+h"{}}\newline
+Gráfico de dependência de inclusões para main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70}\label{main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70} 
+void {\bfseries app\+\_\+main} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ponto de entrada do firmware de arquitetura ultra-\/mínima. 
+
+\begin{DoxyAuthor}{Autor}
+Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2026
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*} Inicializa a biblioteca gerenciadora de tarefas e passa o controle total da CPU para o kernel do Free\+RTOS. 
+\end{DoxyItemize}
+\end{DoxyDate}

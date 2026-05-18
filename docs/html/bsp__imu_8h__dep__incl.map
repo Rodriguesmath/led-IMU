@@ -1,0 +1,7 @@
+<map id="main/inc/bsp_imu.h" name="main/inc/bsp_imu.h">
+<area shape="rect" id="Node000001" title="Board Support Package para comunicação I2C e conversão de dados do sensor inercial MPU6050." alt="" coords="90,5,224,32"/>
+<area shape="rect" id="Node000002" href="$bsp__imu_8c.html" title="Implementação dos drivers I2C e formatação matemática dos dados da IMU." alt="" coords="5,80,141,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,45,89,82,86,78,129,40"/>
+<area shape="rect" id="Node000003" href="$hal__system_8c.html" title="Implementação dos serviços de abstração e conversão de dados de hardware." alt="" coords="164,80,318,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,40,228,78,225,82,182,45"/>
+</map>

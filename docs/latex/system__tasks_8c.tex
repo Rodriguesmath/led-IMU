@@ -1,0 +1,127 @@
+\doxysection{Referência do Arquivo main/src/system\+\_\+tasks.c}
+\hypertarget{system__tasks_8c}{}\label{system__tasks_8c}\index{main/src/system\_tasks.c@{main/src/system\_tasks.c}}
+
+
+Implementação e gerenciamento das rotinas internas das Tarefas do RTOS.  
+
+
+{\ttfamily \#include "{}system\+\_\+tasks.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/\+Free\+RTOS.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/task.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/queue.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/semphr.\+h"{}}\newline
+Gráfico de dependência de inclusões para system\+\_\+tasks.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system__tasks_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{system__tasks_8c_a00b05c5ddb026aa8fd1e0c5b327a8feb}\label{system__tasks_8c_a00b05c5ddb026aa8fd1e0c5b327a8feb} 
+\#define {\bfseries TASK\+\_\+\+POT\+\_\+\+STACK\+\_\+\+SIZE}~2048
+\item 
+\Hypertarget{system__tasks_8c_a573df7f9358ddae7f5c43d5adccfb5d9}\label{system__tasks_8c_a573df7f9358ddae7f5c43d5adccfb5d9} 
+\#define {\bfseries TASK\+\_\+\+LED\+\_\+\+STACK\+\_\+\+SIZE}~2048
+\item 
+\Hypertarget{system__tasks_8c_a1aa65fa91f920c182764bae08b31d893}\label{system__tasks_8c_a1aa65fa91f920c182764bae08b31d893} 
+\#define {\bfseries TASK\+\_\+\+IMU\+\_\+\+STACK\+\_\+\+SIZE}~3072
+\item 
+\Hypertarget{system__tasks_8c_af80445ee7d2e34f3177e2a88f1928086}\label{system__tasks_8c_af80445ee7d2e34f3177e2a88f1928086} 
+\#define {\bfseries TASK\+\_\+\+CONSOLE\+\_\+\+STACK\+\_\+\+SIZE}~3072
+\item 
+\#define \mbox{\hyperlink{system__tasks_8c_aa899c8d8460ad8ced2b5f804026b7921}{TASK\+\_\+\+POT\+\_\+\+PRIORITY}}~2
+\item 
+\#define \mbox{\hyperlink{system__tasks_8c_a4befde24588eddf3ff14dca41fcd281e}{TASK\+\_\+\+LED\+\_\+\+PRIORITY}}~3
+\item 
+\#define \mbox{\hyperlink{system__tasks_8c_a49a4d19ae0127fce90eccc184b82cdcc}{TASK\+\_\+\+IMU\+\_\+\+PRIORITY}}~3
+\item 
+\#define \mbox{\hyperlink{system__tasks_8c_a9618f02429d4cdb98aeeb7d08d54dae0}{TASK\+\_\+\+CONSOLE\+\_\+\+PRIORITY}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{system__tasks_8c_aeaac97ef8a153a4e1abc636f535656eb}\label{system__tasks_8c_aeaac97ef8a153a4e1abc636f535656eb} 
+enum \mbox{\hyperlink{system__tasks_8c_aeaac97ef8a153a4e1abc636f535656eb}{system\+\_\+state\+\_\+t}} \{ {\bfseries STATE\+\_\+\+LIVE}
+, {\bfseries STATE\+\_\+\+HOLD}
+ \}
+\begin{DoxyCompactList}\small\item\em Máquina de estados interna do firmware. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{system__tasks_8c_a30cd49b8883076704708be05a1213c46}{system\+\_\+tasks\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa os recursos do RTOS e cria as tarefas do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação e gerenciamento das rotinas internas das Tarefas do RTOS. 
+
+\begin{DoxyAuthor}{Autor}
+Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2026 
+\end{DoxyDate}
+
+
+\label{doc-define-members}
+\Hypertarget{system__tasks_8c_doc-define-members}
+\doxysubsection{Definições e macros}
+\Hypertarget{system__tasks_8c_a9618f02429d4cdb98aeeb7d08d54dae0}\index{system\_tasks.c@{system\_tasks.c}!TASK\_CONSOLE\_PRIORITY@{TASK\_CONSOLE\_PRIORITY}}
+\index{TASK\_CONSOLE\_PRIORITY@{TASK\_CONSOLE\_PRIORITY}!system\_tasks.c@{system\_tasks.c}}
+\doxysubsubsection{\texorpdfstring{TASK\_CONSOLE\_PRIORITY}{TASK\_CONSOLE\_PRIORITY}}
+{\footnotesize\ttfamily \label{system__tasks_8c_a9618f02429d4cdb98aeeb7d08d54dae0} 
+\#define TASK\+\_\+\+CONSOLE\+\_\+\+PRIORITY~1}
+
+Prioridade Baixa para escrita na UART. \Hypertarget{system__tasks_8c_a49a4d19ae0127fce90eccc184b82cdcc}\index{system\_tasks.c@{system\_tasks.c}!TASK\_IMU\_PRIORITY@{TASK\_IMU\_PRIORITY}}
+\index{TASK\_IMU\_PRIORITY@{TASK\_IMU\_PRIORITY}!system\_tasks.c@{system\_tasks.c}}
+\doxysubsubsection{\texorpdfstring{TASK\_IMU\_PRIORITY}{TASK\_IMU\_PRIORITY}}
+{\footnotesize\ttfamily \label{system__tasks_8c_a49a4d19ae0127fce90eccc184b82cdcc} 
+\#define TASK\+\_\+\+IMU\+\_\+\+PRIORITY~3}
+
+Prioridade Média/\+Alta para amostragem do I2C. \Hypertarget{system__tasks_8c_a4befde24588eddf3ff14dca41fcd281e}\index{system\_tasks.c@{system\_tasks.c}!TASK\_LED\_PRIORITY@{TASK\_LED\_PRIORITY}}
+\index{TASK\_LED\_PRIORITY@{TASK\_LED\_PRIORITY}!system\_tasks.c@{system\_tasks.c}}
+\doxysubsubsection{\texorpdfstring{TASK\_LED\_PRIORITY}{TASK\_LED\_PRIORITY}}
+{\footnotesize\ttfamily \label{system__tasks_8c_a4befde24588eddf3ff14dca41fcd281e} 
+\#define TASK\+\_\+\+LED\+\_\+\+PRIORITY~3}
+
+Prioridade Média/\+Alta para atualização do LED. \Hypertarget{system__tasks_8c_aa899c8d8460ad8ced2b5f804026b7921}\index{system\_tasks.c@{system\_tasks.c}!TASK\_POT\_PRIORITY@{TASK\_POT\_PRIORITY}}
+\index{TASK\_POT\_PRIORITY@{TASK\_POT\_PRIORITY}!system\_tasks.c@{system\_tasks.c}}
+\doxysubsubsection{\texorpdfstring{TASK\_POT\_PRIORITY}{TASK\_POT\_PRIORITY}}
+{\footnotesize\ttfamily \label{system__tasks_8c_aa899c8d8460ad8ced2b5f804026b7921} 
+\#define TASK\+\_\+\+POT\+\_\+\+PRIORITY~2}
+
+Prioridade Média/\+Baixa para o potenciômetro. 
+
+\label{doc-func-members}
+\Hypertarget{system__tasks_8c_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{system__tasks_8c_a30cd49b8883076704708be05a1213c46}\index{system\_tasks.c@{system\_tasks.c}!system\_tasks\_init@{system\_tasks\_init}}
+\index{system\_tasks\_init@{system\_tasks\_init}!system\_tasks.c@{system\_tasks.c}}
+\doxysubsubsection{\texorpdfstring{system\_tasks\_init()}{system\_tasks\_init()}}
+{\footnotesize\ttfamily \label{system__tasks_8c_a30cd49b8883076704708be05a1213c46} 
+esp\+\_\+err\+\_\+t system\+\_\+tasks\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa os recursos do RTOS e cria as tarefas do sistema. 
+
+
+\begin{DoxyItemize}
+\item Cria internamente as filas, semáforos e mutexes necessários, inicializa a camada HAL e registra as 4 tarefas principais no scheduler do Free\+RTOS.
+\item \begin{DoxyReturn}{Retorna}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK se o hardware e os recursos do RTOS forem criados com sucesso. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system__tasks_8c_a30cd49b8883076704708be05a1213c46_cgraph}
+\end{center}
+\end{figure}

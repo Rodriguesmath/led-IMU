@@ -1,0 +1,86 @@
+\doxysection{Referência do Arquivo main/src/bsp\+\_\+led.c}
+\hypertarget{bsp__led_8c}{}\label{bsp__led_8c}\index{main/src/bsp\_led.c@{main/src/bsp\_led.c}}
+
+
+Implementação dos recursos de hardware (LEDC/\+PWM) para controle de intensidade do LED.  
+
+
+{\ttfamily \#include "{}bsp\+\_\+led.\+h"{}}\newline
+{\ttfamily \#include "{}driver/ledc.\+h"{}}\newline
+Gráfico de dependência de inclusões para bsp\+\_\+led.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{bsp__led_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp__led_8c_a1bc420f505e4381c122b5e9f62a4e8d1}{bsp\+\_\+led\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa o periférico LEDC (PWM) para o controle do LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__led_8c_a7fd21502d132a6be67897022baa562ce}{bsp\+\_\+led\+\_\+set\+\_\+brightness}} (uint32\+\_\+t duty\+\_\+cycle)
+\begin{DoxyCompactList}\small\item\em Atualiza a intensidade do brilho do LED (Duty Cycle). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação dos recursos de hardware (LEDC/\+PWM) para controle de intensidade do LED. 
+
+\begin{DoxyAuthor}{Autor}
+Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2026 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{bsp__led_8c_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{bsp__led_8c_a1bc420f505e4381c122b5e9f62a4e8d1}\index{bsp\_led.c@{bsp\_led.c}!bsp\_led\_init@{bsp\_led\_init}}
+\index{bsp\_led\_init@{bsp\_led\_init}!bsp\_led.c@{bsp\_led.c}}
+\doxysubsubsection{\texorpdfstring{bsp\_led\_init()}{bsp\_led\_init()}}
+{\footnotesize\ttfamily \label{bsp__led_8c_a1bc420f505e4381c122b5e9f62a4e8d1} 
+void bsp\+\_\+led\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o periférico LEDC (PWM) para o controle do LED. 
+
+
+\begin{DoxyItemize}
+\item Configura o timer com resolução de 13 bits e frequência de 5k\+Hz, vinculando o canal ao pino configurado em \doxylink{bsp__led_8h_ae70934b3338990d4a3faecf2ee172d92}{PIN\+\_\+\+LED}. 
+\end{DoxyItemize}\texorpdfstring{$<$}{<} Resolução de 13 bits exigida
+
+\texorpdfstring{$<$}{<} Frequência de 5k\+HzEsse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__led_8c_a1bc420f505e4381c122b5e9f62a4e8d1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__led_8c_a7fd21502d132a6be67897022baa562ce}\index{bsp\_led.c@{bsp\_led.c}!bsp\_led\_set\_brightness@{bsp\_led\_set\_brightness}}
+\index{bsp\_led\_set\_brightness@{bsp\_led\_set\_brightness}!bsp\_led.c@{bsp\_led.c}}
+\doxysubsubsection{\texorpdfstring{bsp\_led\_set\_brightness()}{bsp\_led\_set\_brightness()}}
+{\footnotesize\ttfamily \label{bsp__led_8c_a7fd21502d132a6be67897022baa562ce} 
+void bsp\+\_\+led\+\_\+set\+\_\+brightness (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duty\+\_\+cycle}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza a intensidade do brilho do LED (Duty Cycle). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em duty\+\_\+cycle} & Valor do ciclo de trabalho mapeado em 13 bits (0 a 8191). \\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{bsp__led_8c_a7fd21502d132a6be67897022baa562ce_icgraph}
+\end{center}
+\end{figure}

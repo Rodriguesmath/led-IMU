@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto RTOS - Atividade 09: Código-Fonte de main/inc/bsp_imu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto RTOS - Atividade 09<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('bsp__imu_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">bsp_imu.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bsp__imu_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef BSP_IMU_H_</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define BSP_IMU_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;esp_err.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="bsp__imu_8h.html#af47631d568bba17edf9d1ea042602bb6">   14</a></span><span class="preprocessor">#define I2C_MASTER_SDA_IO           21      </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="bsp__imu_8h.html#a033b5e8a30541fe4ff939a62fdb7a43d">   15</a></span><span class="preprocessor">#define I2C_MASTER_SCL_IO           22      </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="bsp__imu_8h.html#ad4d6255d8f7e5dc770e773b787977508">   16</a></span><span class="preprocessor">#define MPU6050_ADDR                0x68    </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structimu__data__t.html">   22</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structimu__data__t.html#afa2c17e76da81d63f578dc3b003f4cff">   23</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structimu__data__t.html#afa2c17e76da81d63f578dc3b003f4cff">x</a>; </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structimu__data__t.html#a5a379f78276e3fbccc246d6c2d9046b0">   24</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structimu__data__t.html#a5a379f78276e3fbccc246d6c2d9046b0">y</a>; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structimu__data__t.html#a8ba2b90ff110db3f86f0922bdc8cfb50">   25</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structimu__data__t.html#a8ba2b90ff110db3f86f0922bdc8cfb50">z</a>; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <a class="code hl_struct" href="structimu__data__t.html">imu_data_t</a>;</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>esp_err_t <a class="code hl_function" href="bsp__imu_8h.html#a08a6e2fc2f825004443ba357cd2fadf4">bsp_imu_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>esp_err_t <a class="code hl_function" href="bsp__imu_8h.html#a557fc8c4b03b1f191c01184914bcc610">bsp_imu_read_accel</a>(<a class="code hl_struct" href="structimu__data__t.html">imu_data_t</a> *data);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">/* BSP_IMU_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="absp__imu_8h_html_a08a6e2fc2f825004443ba357cd2fadf4"><div class="ttname"><a href="bsp__imu_8h.html#a08a6e2fc2f825004443ba357cd2fadf4">bsp_imu_init</a></div><div class="ttdeci">esp_err_t bsp_imu_init(void)</div><div class="ttdoc">Inicializa o barramento I2C em modo mestre e acorda o chip MPU6050.</div><div class="ttdef"><b>Definição</b> bsp_imu.c:14</div></div>
+<div class="ttc" id="absp__imu_8h_html_a557fc8c4b03b1f191c01184914bcc610"><div class="ttname"><a href="bsp__imu_8h.html#a557fc8c4b03b1f191c01184914bcc610">bsp_imu_read_accel</a></div><div class="ttdeci">esp_err_t bsp_imu_read_accel(imu_data_t *data)</div><div class="ttdoc">Lê os registradores de aceleração da IMU e converte os valores brutos para g.</div><div class="ttdef"><b>Definição</b> bsp_imu.c:40</div></div>
+<div class="ttc" id="astructimu__data__t_html"><div class="ttname"><a href="structimu__data__t.html">imu_data_t</a></div><div class="ttdoc">Estrutura que armazena as acelerações convertidas em g para os três eixos espaciais.</div><div class="ttdef"><b>Definição</b> bsp_imu.h:22</div></div>
+<div class="ttc" id="astructimu__data__t_html_a5a379f78276e3fbccc246d6c2d9046b0"><div class="ttname"><a href="structimu__data__t.html#a5a379f78276e3fbccc246d6c2d9046b0">imu_data_t::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definição</b> bsp_imu.h:24</div></div>
+<div class="ttc" id="astructimu__data__t_html_a8ba2b90ff110db3f86f0922bdc8cfb50"><div class="ttname"><a href="structimu__data__t.html#a8ba2b90ff110db3f86f0922bdc8cfb50">imu_data_t::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definição</b> bsp_imu.h:25</div></div>
+<div class="ttc" id="astructimu__data__t_html_afa2c17e76da81d63f578dc3b003f4cff"><div class="ttname"><a href="structimu__data__t.html#afa2c17e76da81d63f578dc3b003f4cff">imu_data_t::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definição</b> bsp_imu.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a href="dir_813fe146c60d50285ccc7d4a4002d508.html">inc</a></li><li class="navelem"><a href="bsp__imu_8h.html">bsp_imu.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

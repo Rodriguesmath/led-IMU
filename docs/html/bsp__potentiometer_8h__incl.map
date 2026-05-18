@@ -1,0 +1,5 @@
+<map id="main/inc/bsp_potentiometer.h" name="main/inc/bsp_potentiometer.h">
+<area shape="rect" id="Node000001" title="Board Support Package para leitura analógica de potenciômetro via driver ADC Oneshot." alt="" coords="5,5,198,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="69,80,134,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,33,104,64,99,64,99,33"/>
+</map>

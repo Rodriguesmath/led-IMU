@@ -1,0 +1,30 @@
+\doxysection{hal\+\_\+system.\+h}
+\hypertarget{hal__system_8h_source}{}\label{hal__system_8h_source}\index{main/inc/hal\_system.h@{main/inc/hal\_system.h}}
+\mbox{\hyperlink{hal__system_8h}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ HAL\_SYSTEM\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ HAL\_SYSTEM\_H\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}esp\_err.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structhal__imu__data__t_a8f8444cfea9108e0c514e97dae15356e}{x}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structhal__imu__data__t_a6189a95e092726a1d0a0d6e25de33efd}{y}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structhal__imu__data__t_a2dc304928b2356eb8b0885c369973e69}{z}};\ }
+\DoxyCodeLine{00025\ \}\ \mbox{\hyperlink{structhal__imu__data__t}{hal\_imu\_data\_t}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ esp\_err\_t\ \mbox{\hyperlink{hal__system_8h_a861a576709580c24860cc0e0fccf6685}{hal\_system\_init}}(\textcolor{keywordtype}{void}\ *sys\_semaphore);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{hal__system_8h_aa0d01b0e8253639a6cec704ae7ad839c}{hal\_led\_set\_percent}}(uint32\_t\ percentage);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{hal__system_8h_af619c344743baba796c310424844f55c}{hal\_potentiometer\_get\_data}}(uint32\_t\ *raw\_value,\ uint32\_t\ *voltage\_mv);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ esp\_err\_t\ \mbox{\hyperlink{hal__system_8h_a3dc9c297c9f70d3f274e02e838f875bf}{hal\_imu\_get\_accel}}(\mbox{\hyperlink{structhal__imu__data__t}{hal\_imu\_data\_t}}\ *imu\_data);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HAL\_SYSTEM\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

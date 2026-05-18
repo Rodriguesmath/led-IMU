@@ -1,0 +1,5 @@
+<map id="bsp_potentiometer_read_mv" name="bsp_potentiometer_read_mv">
+<area shape="rect" id="Node000001" title="Realiza a leitura e converte o valor medido em milivolts." alt="" coords="5,5,191,32"/>
+<area shape="rect" id="Node000002" href="$bsp__potentiometer_8c.html#a065f4fcbdfee9f5409818bfd5c15d61a" title="Realiza a leitura do valor bruto do conversor ADC." alt="" coords="239,5,427,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,16,223,16,223,21,191,21"/>
+</map>

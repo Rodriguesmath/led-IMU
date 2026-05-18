@@ -1,0 +1,134 @@
+\doxysection{Referência do Arquivo main/inc/bsp\+\_\+potentiometer.h}
+\hypertarget{bsp__potentiometer_8h}{}\label{bsp__potentiometer_8h}\index{main/inc/bsp\_potentiometer.h@{main/inc/bsp\_potentiometer.h}}
+
+
+Board Support Package para leitura analógica de potenciômetro via driver ADC Oneshot.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Gráfico de dependência de inclusões para bsp\+\_\+potentiometer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{bsp__potentiometer_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__potentiometer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{bsp__potentiometer_8h_a6128d163dc8a51921a873cb88d103399}\label{bsp__potentiometer_8h_a6128d163dc8a51921a873cb88d103399} 
+\#define {\bfseries POT\+\_\+\+ADC\+\_\+\+CHANNEL}~ADC\+\_\+\+CHANNEL\+\_\+6
+\begin{DoxyCompactList}\small\item\em Canal do ADC correspondente ao pino analógico utilizado (ADC1\+\_\+\+CHANNEL\+\_\+6 = GPIO34). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp__potentiometer_8h_afcab87f9b60ee51c1e201ab0bf0873b3}{bsp\+\_\+potentiometer\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa o conversor analógico-\/digital (ADC) no modo Oneshot. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{bsp__potentiometer_8h_a065f4fcbdfee9f5409818bfd5c15d61a}{bsp\+\_\+potentiometer\+\_\+read\+\_\+raw}} (void)
+\begin{DoxyCompactList}\small\item\em Realiza a leitura do valor bruto do conversor ADC. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{bsp__potentiometer_8h_ae661a47a4212cd3505932899cb1a4cd6}{bsp\+\_\+potentiometer\+\_\+read\+\_\+mv}} (void)
+\begin{DoxyCompactList}\small\item\em Realiza a leitura e converte o valor medido em milivolts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Board Support Package para leitura analógica de potenciômetro via driver ADC Oneshot. 
+
+\begin{DoxyAuthor}{Autor}
+Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2026 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{bsp__potentiometer_8h_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{bsp__potentiometer_8h_afcab87f9b60ee51c1e201ab0bf0873b3}\index{bsp\_potentiometer.h@{bsp\_potentiometer.h}!bsp\_potentiometer\_init@{bsp\_potentiometer\_init}}
+\index{bsp\_potentiometer\_init@{bsp\_potentiometer\_init}!bsp\_potentiometer.h@{bsp\_potentiometer.h}}
+\doxysubsubsection{\texorpdfstring{bsp\_potentiometer\_init()}{bsp\_potentiometer\_init()}}
+{\footnotesize\ttfamily \label{bsp__potentiometer_8h_afcab87f9b60ee51c1e201ab0bf0873b3} 
+void bsp\+\_\+potentiometer\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o conversor analógico-\/digital (ADC) no modo Oneshot. 
+
+
+\begin{DoxyItemize}
+\item Configura o ADC1 com resolução de 12 bits (0 a 4095) e atenuação para escala de até 3.\+3V. 
+\end{DoxyItemize}\texorpdfstring{$<$}{<} Resolução de 12 bits (0-\/4095)
+
+\texorpdfstring{$<$}{<} Atenuação para leitura de até 3.\+3VEsse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__potentiometer_8h_afcab87f9b60ee51c1e201ab0bf0873b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__potentiometer_8h_ae661a47a4212cd3505932899cb1a4cd6}\index{bsp\_potentiometer.h@{bsp\_potentiometer.h}!bsp\_potentiometer\_read\_mv@{bsp\_potentiometer\_read\_mv}}
+\index{bsp\_potentiometer\_read\_mv@{bsp\_potentiometer\_read\_mv}!bsp\_potentiometer.h@{bsp\_potentiometer.h}}
+\doxysubsubsection{\texorpdfstring{bsp\_potentiometer\_read\_mv()}{bsp\_potentiometer\_read\_mv()}}
+{\footnotesize\ttfamily \label{bsp__potentiometer_8h_ae661a47a4212cd3505932899cb1a4cd6} 
+uint32\+\_\+t bsp\+\_\+potentiometer\+\_\+read\+\_\+mv (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Realiza a leitura e converte o valor medido em milivolts. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Retorna}
+uint32\+\_\+t Tensão calculada no pino em milivolts (0 a 3300 mV). 
+\end{DoxyReturn}
+
+\end{DoxyItemize}Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__potentiometer_8h_ae661a47a4212cd3505932899cb1a4cd6_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__potentiometer_8h_ae661a47a4212cd3505932899cb1a4cd6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__potentiometer_8h_a065f4fcbdfee9f5409818bfd5c15d61a}\index{bsp\_potentiometer.h@{bsp\_potentiometer.h}!bsp\_potentiometer\_read\_raw@{bsp\_potentiometer\_read\_raw}}
+\index{bsp\_potentiometer\_read\_raw@{bsp\_potentiometer\_read\_raw}!bsp\_potentiometer.h@{bsp\_potentiometer.h}}
+\doxysubsubsection{\texorpdfstring{bsp\_potentiometer\_read\_raw()}{bsp\_potentiometer\_read\_raw()}}
+{\footnotesize\ttfamily \label{bsp__potentiometer_8h_a065f4fcbdfee9f5409818bfd5c15d61a} 
+uint32\+\_\+t bsp\+\_\+potentiometer\+\_\+read\+\_\+raw (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Realiza a leitura do valor bruto do conversor ADC. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Retorna}
+uint32\+\_\+t Valor digital bruto obtido entre 0 e 4095. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__potentiometer_8h_a065f4fcbdfee9f5409818bfd5c15d61a_icgraph}
+\end{center}
+\end{figure}

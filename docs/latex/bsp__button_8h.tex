@@ -1,0 +1,79 @@
+\doxysection{Referência do Arquivo main/inc/bsp\+\_\+button.h}
+\hypertarget{bsp__button_8h}{}\label{bsp__button_8h}\index{main/inc/bsp\_button.h@{main/inc/bsp\_button.h}}
+
+
+Board Support Package para gerenciamento de botões com tratamento de interrupção e debounce.  
+
+
+{\ttfamily \#include "{}freertos/\+Free\+RTOS.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/semphr.\+h"{}}\newline
+Gráfico de dependência de inclusões para bsp\+\_\+button.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{bsp__button_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{bsp__button_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{bsp__button_8h_a92fdab197e388c3c44586db0b10a5eb9}\label{bsp__button_8h_a92fdab197e388c3c44586db0b10a5eb9} 
+\#define {\bfseries PIN\+\_\+\+BTN}~4
+\begin{DoxyCompactList}\small\item\em Pino GPIO conectado ao Botão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp__button_8h_a5b1e076b329048176e48cf8e6d7caac2}{bsp\+\_\+button\+\_\+init}} (Semaphore\+Handle\+\_\+t sys\+\_\+semaphore)
+\begin{DoxyCompactList}\small\item\em Inicializa o botão de entrada com interrupções ativas e associa o semáforo do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Board Support Package para gerenciamento de botões com tratamento de interrupção e debounce. 
+
+\begin{DoxyAuthor}{Autor}
+Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2026 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{bsp__button_8h_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{bsp__button_8h_a5b1e076b329048176e48cf8e6d7caac2}\index{bsp\_button.h@{bsp\_button.h}!bsp\_button\_init@{bsp\_button\_init}}
+\index{bsp\_button\_init@{bsp\_button\_init}!bsp\_button.h@{bsp\_button.h}}
+\doxysubsubsection{\texorpdfstring{bsp\_button\_init()}{bsp\_button\_init()}}
+{\footnotesize\ttfamily \label{bsp__button_8h_a5b1e076b329048176e48cf8e6d7caac2} 
+void bsp\+\_\+button\+\_\+init (\begin{DoxyParamCaption}\item[{Semaphore\+Handle\+\_\+t}]{sys\+\_\+semaphore}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o botão de entrada com interrupções ativas e associa o semáforo do sistema. 
+
+
+\begin{DoxyItemize}
+\item Configura o pino como entrada em Pull-\/\+Up, registra o serviço de ISR e cria o Timer de software do Free\+RTOS para realizar o debounce por software.
+\item 
+\begin{DoxyParams}{Parâmetros}
+{\em sys\+\_\+semaphore} & Handler do semáforo binário que será liberado na confirmação do clique. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__button_8h_a5b1e076b329048176e48cf8e6d7caac2_icgraph}
+\end{center}
+\end{figure}

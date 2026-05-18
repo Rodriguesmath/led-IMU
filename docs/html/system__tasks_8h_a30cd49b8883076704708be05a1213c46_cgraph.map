@@ -1,0 +1,13 @@
+<map id="system_tasks_init" name="system_tasks_init">
+<area shape="rect" id="Node000001" title="Inicializa os recursos do RTOS e cria as tarefas do sistema." alt="" coords="5,81,133,108"/>
+<area shape="rect" id="Node000002" href="$hal__system_8c.html#a861a576709580c24860cc0e0fccf6685" title="Inicializa todo o ecossistema de hardware do dispositivo." alt="" coords="181,81,293,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,92,165,92,165,97,133,97"/>
+<area shape="rect" id="Node000003" href="$bsp__button_8c.html#a5b1e076b329048176e48cf8e6d7caac2" title="Inicializa o botão de entrada com interrupções ativas e associa o semáforo do sistema." alt="" coords="362,5,472,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,78,340,42,356,35,358,40,342,46,265,83"/>
+<area shape="rect" id="Node000004" href="$bsp__imu_8c.html#a08a6e2fc2f825004443ba357cd2fadf4" title="Inicializa o barramento I2C em modo mestre e acorda o chip MPU6050." alt="" coords="370,56,464,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="293,84,354,75,355,81,294,89"/>
+<area shape="rect" id="Node000005" href="$bsp__led_8c.html#a1bc420f505e4381c122b5e9f62a4e8d1" title="Inicializa o periférico LEDC (PWM) para o controle do LED." alt="" coords="372,107,462,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="294,100,357,109,356,114,293,105"/>
+<area shape="rect" id="Node000006" href="$bsp__potentiometer_8c.html#afcab87f9b60ee51c1e201ab0bf0873b3" title="Inicializa o conversor analógico&#45;digital (ADC) no modo Oneshot." alt="" coords="341,157,493,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="265,106,342,143,358,149,356,154,340,148,263,111"/>
+</map>

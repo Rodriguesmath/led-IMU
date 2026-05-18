@@ -1,0 +1,5 @@
+<map id="bsp_potentiometer_read_mv" name="bsp_potentiometer_read_mv">
+<area shape="rect" id="Node000001" title="Realiza a leitura e converte o valor medido em milivolts." alt="" coords="235,5,420,32"/>
+<area shape="rect" id="Node000002" href="$hal__system_8c.html#af619c344743baba796c310424844f55c" title="Lê o valor atual do potenciômetro de forma estruturada." alt="" coords="5,5,187,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,21,187,21,187,16,219,16"/>
+</map>

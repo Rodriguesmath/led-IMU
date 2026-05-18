@@ -1,0 +1,99 @@
+\doxysection{Referência do Arquivo main/inc/bsp\+\_\+led.h}
+\hypertarget{bsp__led_8h}{}\label{bsp__led_8h}\index{main/inc/bsp\_led.h@{main/inc/bsp\_led.h}}
+
+
+Board Support Package para controle do LED utilizando o periférico LEDC (PWM).  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Gráfico de dependência de inclusões para bsp\+\_\+led.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{bsp__led_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{bsp__led_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{bsp__led_8h_ae70934b3338990d4a3faecf2ee172d92}\label{bsp__led_8h_ae70934b3338990d4a3faecf2ee172d92} 
+\#define {\bfseries PIN\+\_\+\+LED}~15
+\begin{DoxyCompactList}\small\item\em Pino GPIO conectado ao LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp__led_8h_a1bc420f505e4381c122b5e9f62a4e8d1}{bsp\+\_\+led\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Inicializa o periférico LEDC (PWM) para o controle do LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__led_8h_a7fd21502d132a6be67897022baa562ce}{bsp\+\_\+led\+\_\+set\+\_\+brightness}} (uint32\+\_\+t duty\+\_\+cycle)
+\begin{DoxyCompactList}\small\item\em Atualiza a intensidade do brilho do LED (Duty Cycle). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Board Support Package para controle do LED utilizando o periférico LEDC (PWM). 
+
+\begin{DoxyAuthor}{Autor}
+Rodrigues 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+2026 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{bsp__led_8h_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{bsp__led_8h_a1bc420f505e4381c122b5e9f62a4e8d1}\index{bsp\_led.h@{bsp\_led.h}!bsp\_led\_init@{bsp\_led\_init}}
+\index{bsp\_led\_init@{bsp\_led\_init}!bsp\_led.h@{bsp\_led.h}}
+\doxysubsubsection{\texorpdfstring{bsp\_led\_init()}{bsp\_led\_init()}}
+{\footnotesize\ttfamily \label{bsp__led_8h_a1bc420f505e4381c122b5e9f62a4e8d1} 
+void bsp\+\_\+led\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o periférico LEDC (PWM) para o controle do LED. 
+
+
+\begin{DoxyItemize}
+\item Configura o timer com resolução de 13 bits e frequência de 5k\+Hz, vinculando o canal ao pino configurado em \doxylink{bsp__led_8h_ae70934b3338990d4a3faecf2ee172d92}{PIN\+\_\+\+LED}. 
+\end{DoxyItemize}\texorpdfstring{$<$}{<} Resolução de 13 bits exigida
+
+\texorpdfstring{$<$}{<} Frequência de 5k\+HzEsse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__led_8h_a1bc420f505e4381c122b5e9f62a4e8d1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__led_8h_a7fd21502d132a6be67897022baa562ce}\index{bsp\_led.h@{bsp\_led.h}!bsp\_led\_set\_brightness@{bsp\_led\_set\_brightness}}
+\index{bsp\_led\_set\_brightness@{bsp\_led\_set\_brightness}!bsp\_led.h@{bsp\_led.h}}
+\doxysubsubsection{\texorpdfstring{bsp\_led\_set\_brightness()}{bsp\_led\_set\_brightness()}}
+{\footnotesize\ttfamily \label{bsp__led_8h_a7fd21502d132a6be67897022baa562ce} 
+void bsp\+\_\+led\+\_\+set\+\_\+brightness (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duty\+\_\+cycle}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza a intensidade do brilho do LED (Duty Cycle). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em duty\+\_\+cycle} & Valor do ciclo de trabalho mapeado em 13 bits (0 a 8191). \\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{bsp__led_8h_a7fd21502d132a6be67897022baa562ce_icgraph}
+\end{center}
+\end{figure}
